@@ -10,8 +10,16 @@
   }
 }
 
+.title {
+  font-family: $gelasio;
+  font-weight: 500;
+  font-size: 43px;
+
+  text-align: center;
+}
+
 .subtitle {
   font-size: 18px;
-  line-height: 1.6;
   opacity: 0.6;
+  text-align: center;
 }
