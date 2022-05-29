@@ -599,7 +599,6 @@ a {
   display: block;
   margin-bottom: 20px;
   margin-right: 100px;
-  padding-right: 20px;
   transition: color 0.3s;
 }
 .footer__links a:hover {
@@ -620,7 +619,6 @@ a {
   padding-left: 5px;
   height: 44px;
   max-width: 195px;
-  margin-right: 36px;
   margin-bottom: 20px;
   background: rgba(38, 148, 153, 0);
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -631,6 +629,7 @@ a {
   content: "";
 }
 .footer__subscribe .subscribe__form button {
+  margin-left: 36px;
   cursor: pointer;
   padding: 12px 32px;
   color: #fff;
@@ -638,11 +637,25 @@ a {
 
 @media (max-width: 991px) {
   .footer .footer__columns {
-    justify-content: space-around;
+    justify-content: center;
   }
 }
 @media (max-width: 576px) {
   .footer__links a {
-    margin-right: 50px;
+    margin-right: 20px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 425px) {
+  .footer .footer__columns {
+    justify-content: center;
+  }
+
+  .footer__contacts {
+    margin-right: 30px;
+  }
+
+  .footer__links {
+    margin-left: 0;
   }
 }
