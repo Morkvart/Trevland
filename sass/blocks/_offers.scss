@@ -42,12 +42,7 @@
 .offers__item {
   min-width: 262px;
   margin: 0 35px 10px;
-  &:first-child {
-    margin-left: 0;
-  }
-  &:last-child {
-    margin-right: 0;
-  }
+
   .item__img {
     max-width: 262px;
     height: 173px;
@@ -107,6 +102,14 @@
       font-size: 16px;
       font-weight: 400;
       opacity: 0.6;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .offers {
+    .offers__title {
+      margin-top: 80px;
     }
   }
 }

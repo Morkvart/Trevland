@@ -12,20 +12,27 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <nav class="nav">
                 <div class="nav__logo">Trevland</div>
+
+                <input type="checkbox" id="menu-toggler">
+                <label for="menu-toggler" class="hamburger"><span></span></label>
+
                 <div class="nav__list">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Location</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#header" onclick="setTimeout(closeHamburger, 300)" class="nav__link">Home</a></li>
+                        <li><a href="#location" onclick="setTimeout(closeHamburger, 300)" class="nav__link">Location</a>
+                        </li>
+                        <li><a href="#offers" onclick="setTimeout(closeHamburger, 300)" class="nav__link">Offers</a>
+                        </li>
+                        <li><a href="#blog" onclick="setTimeout(closeHamburger, 300)" class="nav__link">Blog</a></li>
+                        <li><a href="#contact" onclick="setTimeout(closeHamburger, 300)" class="nav__link">Contact</a>
+                        </li>
+                        <li><a href="#" class="nav__btn btn">Booking now</a></li>
                     </ul>
                 </div>
-                <a href="#" class="nav__btn btn">Booking now</a>
             </nav>
 
             <h1 class="header__title">Railtrips To Here, There And Everywhere!</h1>
@@ -37,8 +44,7 @@
     </header>
 
     <main>
-
-        <section class="location">
+        <section class="location" id="location">
             <div class="container">
                 <h2 class="location__title title">Popular Location</h2>
                 <p class="location__subtitle subtitle">For every one of us, travel came first. We’ve spent years living
@@ -61,12 +67,11 @@
                         <div class="item__subtitle">South Korea officially the Republic of Korea is a country in East
                             Asia. </div>
                     </a>
-
                 </div>
             </div>
         </section>
 
-        <section class="offers">
+        <section class="offers" id="offers">
             <div class="container">
                 <h2 class="offers__title title">Special Offers</h2>
                 <p class="offers__subtitle subtitle">With the New Year comes a refreshing sense of wanderlust, a longing
@@ -177,7 +182,7 @@
             </div>
         </section>
 
-        <section class="news">
+        <section class="news" id="blog">
             <div class="container">
                 <h2 class="news__title title"> From Blog & News </h2>
                 <p class="news__subtitle subtitle">Welcome to Community Conversations, a new interview series featuring
@@ -193,51 +198,51 @@
                         </p>
                         <span class="item__author">@thomasalva_adison</span>
                     </div>
-                    <div class="news__list">
-                        <div class="news__items">
 
-                            <div class="news__item">
-                                <div class="item__img">
-                                    <img src="img/news/2.jpg" alt="">
-                                </div>
-                                <div class="item__content">
-                                    <div class="item__title">The Hiroshima Peace!</div>
-                                    <p class="item__subtitle">It was formally opened to the public in August that year.
-                                    </p>
-                                    <span class="item__author">@shova_bd88</span>
-                                </div>
+                    <div class="news__items">
+
+                        <div class="news__item">
+                            <div class="item__img">
+                                <img src="img/news/2.jpg" alt="">
                             </div>
-
-                            <div class="news__item">
-                                <div class="item__img">
-                                    <img src="img/news/3.jpg" alt="">
-                                </div>
-                                <div class="item__content">
-                                    <div class="item__title">The faithful prayers!</div>
-                                    <p class="item__subtitle">A major pilgrimage center for Hindus, the holy city. </p>
-                                    <span class="item__author">@adem/smith</span>
-                                </div>
+                            <div class="item__content">
+                                <div class="item__title">The Hiroshima Peace!</div>
+                                <p class="item__subtitle">It was formally opened to the public in August that year.
+                                </p>
+                                <span class="item__author">@shova_bd88</span>
                             </div>
-
-                            <div class="news__item">
-                                <div class="item__img">
-                                    <img src="img/news/4.jpg" alt="">
-                                </div>
-                                <div class="item__content">
-                                    <div class="item__title">The faColourful waters!</div>
-                                    <p class="item__subtitle">Forest-driven water and energy cycles are poorly. </p>
-                                    <span class="item__author">@jhon7leew</span>
-                                </div>
-                            </div>
-
                         </div>
+
+                        <div class="news__item">
+                            <div class="item__img">
+                                <img src="img/news/3.jpg" alt="">
+                            </div>
+                            <div class="item__content">
+                                <div class="item__title">The faithful prayers!</div>
+                                <p class="item__subtitle">A major pilgrimage center for Hindus, the holy city. </p>
+                                <span class="item__author">@adem/smith</span>
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="item__img">
+                                <img src="img/news/4.jpg" alt="">
+                            </div>
+                            <div class="item__content">
+                                <div class="item__title">The faColourful waters!</div>
+                                <p class="item__subtitle">Forest-driven water and energy cycles are poorly. </p>
+                                <span class="item__author">@jhon7leew</span>
+                            </div>
+                        </div>
+
                     </div>
+
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="container">
             <div class="footer__columns">
                 <div class="footer__contacts">
@@ -265,7 +270,7 @@
                     <div class="subscribe__title">SUBSCRIBE NOW</div>
                     <div class="subscribe__form">
                         <form action="">
-                            <input type="text">
+                            <input type="email" value="Email" onfocus="this.value=''">
                             <button class="subscribe__btn btn">Send</button>
                         </form>
                     </div>

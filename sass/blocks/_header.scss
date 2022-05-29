@@ -19,7 +19,6 @@
     font-size: 65px;
     line-height: 1.2;
     max-width: 804px;
-
     margin-top: 200px;
   }
 
@@ -27,7 +26,6 @@
     margin-top: 30px;
     max-width: 458px;
     margin-bottom: 57px;
-
     font-size: 18px;
     line-height: 1.6;
     opacity: 0.6;
@@ -53,6 +51,7 @@
 
   ul {
     display: flex;
+    align-items: center;
     font-size: 18px;
   }
 
@@ -62,7 +61,10 @@
     &:last-child {
       margin-right: 0;
     }
-    a {
+    &:nth-last-child(2) {
+      margin-right: 170px;
+    }
+    .nav__link {
       transition: color 0.3s, text-shadow 0.3s;
       &:hover {
         color: #da1709;
@@ -72,6 +74,121 @@
   }
 
   .nav__btn {
+    display: inline-block;
     padding: 13px 35px;
+  }
+}
+
+// =============================================================
+#menu-toggler {
+  display: none;
+}
+
+#menu-toggler:checked + .hamburger span {
+  transition: all 0.3s;
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+#menu-toggler:checked + .hamburger span::after {
+  transition: all 0.3s;
+  transform: rotate(-90deg);
+  top: 0;
+}
+
+#menu-toggler:checked + .hamburger span::before {
+  opacity: 0;
+}
+
+.hamburger {
+  display: none;
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  cursor: pointer;
+}
+.hamburger span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  display: block;
+  background-color: #fff;
+  width: 30px;
+  height: 3px;
+  border-radius: 10px;
+}
+
+.hamburger span::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 3px;
+  top: 8px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.hamburger span::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 3px;
+  top: 16px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+// ============================================================
+
+@media (max-width: 991px) {
+  .hamburger {
+    display: block;
+    right: 10px;
+  }
+
+  .nav__list {
+    position: absolute;
+    display: block;
+    right: 0;
+    height: 100vh;
+    z-index: -1;
+
+    left: -1000px;
+  }
+
+  #menu-toggler:checked ~ .nav__list {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #497097;
+    transition: left 0.3s, background-color 0.3s;
+
+    ul {
+      flex-direction: column;
+
+      li {
+        margin-top: 30px;
+        margin-right: 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    .header__title {
+      font-size: 45px;
+      margin-top: 150px;
+    }
+    .header__subtitle {
+      font-size: 16px;
+    }
+
+    .header__btn {
+      font-size: 14px;
+      margin-bottom: 100px;
+    }
   }
 }

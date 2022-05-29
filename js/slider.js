@@ -8,3 +8,5 @@ function next() {
 function prev() {
     sliderMain.prepend(item[item.length - 1]);
 }
+
+
